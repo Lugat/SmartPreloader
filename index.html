@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>smartPreload</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    
+    <p>This is a large image, which will be preloaded when your mouse is closer than 100px.</p>
+    
+    <a href="image.jpg" class="button">Large image</a>
+    
+    <hr />
+    
+    <p>This is a navigation which will preload the links on mouseover.</p>
+    
+    <ul>
+      <li>
+        <a href="https://squareflower.de" target="_blank">Home</a>
+      </li>
+      <li>
+        <a href="https://squareflower.de/impressum.html" target="_blank">Imprint</a>
+      </li>
+      <li>
+        <a href="https://squareflower.de/datenschutz.html" target="_blank">Privacy Policy</a>
+      </li>
+    </ul>
+    
+    <hr />
+    
+    <p>This link will not be preloaded.</p>
+    
+    <a href="https://google.com" target="_blank">Google</a>
+    
+    <br />
+    
+    <p>This button will also not be preloaded. The plugin will only load links, even if you will select multiple elements.</p>
+    
+    <button type="button" class="button">Submit</button>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"></script>
+    <script src="smartPreload.js"></script>
+    <script>
+      
+      $(function() {
+        
+        // preload everything within a distance of 100px
+        $('.button').smartPreload(100);
+        
+        // preload everything on mouseover
+        $('ul a[target="_blank"]').smartPreload();
+        
+      });
+      
+    </script>
+      
+  </body>
+</html>
