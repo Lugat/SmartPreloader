@@ -1,7 +1,7 @@
-# smartPreload
-Simple jQuery plugin which will preload links to speed up the UX.
+# SmartPreloader
+Simple JS plugin which will preload links to speed up the UX.
 
-This plugin will preload URLs behind links. By default all links will be preloaded on mouseover, but you may also pass a distance.
+This plugin will preload URLs behind links. By default all links will be preloaded on mouseover, but you may also pass a distance (perimeter).
 
 The URL will be preloaded in JS, before your user will click the link. This will help to speedup the page and create a better UX.
 

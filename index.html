@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>smartPreload</title>
+    <title>Smart Preloader</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -17,39 +17,31 @@
     
     <ul>
       <li>
-        <a href="https://squareflower.de" target="_blank">Home</a>
+        <a href="https://jinx-digital.com" target="_blank">Home</a>
       </li>
       <li>
-        <a href="https://squareflower.de/impressum.html" target="_blank">Imprint</a>
+        <a href="https://jinx-digital.com/de/impressum.html" target="_blank">Imprint</a>
       </li>
       <li>
-        <a href="https://squareflower.de/datenschutz.html" target="_blank">Privacy Policy</a>
+        <a href="https://jinx-digital.com/de/datenschutz.html" target="_blank">Privacy Policy</a>
       </li>
     </ul>
     
-    <hr />
-    
-    <p>This link will not be preloaded.</p>
-    
-    <a href="https://google.com" target="_blank">Google</a>
-    
-    <br />
-    
-    <p>This button will also not be preloaded. The plugin will only load links, even if you will select multiple elements.</p>
-    
-    <button type="button" class="button">Submit</button>
-    
-    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"></script>
-    <script src="smartPreload.js"></script>
+    <script src="smartPreloader-0.2.js"></script>
     <script>
       
       $(function() {
         
-        // preload everything within a distance of 100px
-        $('.button').smartPreload(100);
+        // preload every link with the class button within a distance of 100px
+        new SmartPreloader({
+          selector: 'a.button',
+          perimeter: 100
+        });
         
         // preload everything on mouseover
-        $('ul a[target="_blank"]').smartPreload();
+        new SmartPreloader({
+          selector: 'ul a[target="_blank"]'
+        });
         
       });
       
