@@ -9,40 +9,13 @@
     
     <p>This is a large image, which will be preloaded when your mouse is closer than 100px.</p>
     
-    <a href="image.jpg" class="button">Large image</a>
-    
-    <hr />
-    
-    <p>This is a navigation which will preload the links on mouseover.</p>
-    
-    <ul>
-      <li>
-        <a href="https://jinx-digital.com" target="_blank">Home</a>
-      </li>
-      <li>
-        <a href="https://jinx-digital.com/de/impressum.html" target="_blank">Imprint</a>
-      </li>
-      <li>
-        <a href="https://jinx-digital.com/de/datenschutz.html" target="_blank">Privacy Policy</a>
-      </li>
-    </ul>
+    <a href="image.jpg">Large image</a>
     
     <script src="smartPreloader-0.2.js"></script>
     <script>
-      
-      $(function() {
-        
-        // preload every link with the class button within a distance of 100px
-        new SmartPreloader({
-          selector: 'a.button',
-          perimeter: 100
-        });
-        
-        // preload everything on mouseover
-        new SmartPreloader({
-          selector: 'ul a[target="_blank"]'
-        });
-        
+              
+      new SmartPreloader({
+        perimeter: 100
       });
       
     </script>

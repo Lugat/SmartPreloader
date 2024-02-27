@@ -18,7 +18,7 @@ function SmartPreloader(config) {
       return this.href;
     }
   }, config);
-      
+        
   this.init();
   
 }
