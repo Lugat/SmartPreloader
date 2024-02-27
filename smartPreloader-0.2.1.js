@@ -1,5 +1,5 @@
 /**
- * Smart Prealoder v0.2
+ * Smart Prealoder v0.2.1
  * 
  * This plugin will preload links before a user clicks on it.
  * As this URLs will be cached, the user will experiance a better performance.
@@ -13,7 +13,7 @@ function SmartPreloader(config) {
   this.config = Object.assign({
     selector: 'a[href]',
     perimeter: 0,
-    flat: 'data-smart-preloaded',
+    flag: 'data-smart-preloaded',
     getUrl: function() {
       return this.href;
     }
