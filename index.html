@@ -4,17 +4,32 @@
     <title>Smart Preloader</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
     
-    <p>This is a large image, which will be preloaded when your mouse is closer than 100px.</p>
-    
-    <a href="image.jpg">Large image</a>
+    <div class="container">
+      <div class="m-5 p-5 bg-light text-center">
+
+        <p>This is a large image, which will be preloaded when your mouse is closer than 100px.</p>
+
+        <a href="image-1.jpg" class="btn btn-primary preload">Large image</a>
+        
+      </div>
+      <div class="m-5 p-5 bg-light text-center">
+
+        <p>This is a large image, which will NOT be preloaded.</p>
+
+        <a href="image-2.jpg" class="btn btn-primary">Large image</a>
+
+      </div>
+    </div>
     
     <script src="smartPreloader-0.2.1.js"></script>
     <script>
               
       new SmartPreloader({
+        selector: 'a.preload',
         perimeter: 100
       });
       
